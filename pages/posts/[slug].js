@@ -4,13 +4,13 @@ import { fetchData } from "../../lib/api"
 import Image from 'next/image';
 import { getStrapiMedia } from "../../lib/media";
 export default function Post({ post }) {
-  const { large } = post.featuredImg.data.attributes.formats;
+  const { medium } = post.featuredImg.data.attributes.formats;
     return (
     <div className="w-screen h-screen flex justify-center bg-gradient-to-r from-gray-700 via-gray-900 to-black">
       <div className="max-w-[500px] mx-auto text-white">  
         <h1 className="text-6xl font-black">{post.title}</h1>
         <h2 className="text-2xl font-thin">{post.description}</h2>
-        <Image src={getStrapiMedia(large.url)} alt="featured image" height={large.height} width={large.width} objectFit='contain'></Image>
+        <Image src={getStrapiMedia(medium.url)} alt="featured image" height={medium.height} width={medium.width} objectFit='contain'></Image>
         <Markdown>{post.text}</Markdown>
       </div>
     </div>
