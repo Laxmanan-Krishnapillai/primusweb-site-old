@@ -1,6 +1,6 @@
 import { content } from '../tailwind.config'
 import Link from 'next/link'
-import Navbar from './components/navbar'
+import Navbar from '../components/navbar'
 export default function Home() {
   return(
     <>
