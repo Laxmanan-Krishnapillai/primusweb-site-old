@@ -1,6 +1,6 @@
 import React from "react";
 import Link from 'next/link'    
-export default function Navbar() {
+export function Navbar() {
     return(
         <nav className=" absolute top-0 left-0 w-screen flex justify-around bg-white">
             <ul className="flex w-100 justify-center">
