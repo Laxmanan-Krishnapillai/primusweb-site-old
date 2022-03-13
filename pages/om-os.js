@@ -1,9 +1,9 @@
 import { Navbar } from '../components/navbar'
-export default function Home() {
+export default function OmOs() {
   return(
     <>
       <Navbar />
-      <h1 className='theme-blue'>Hello world</h1>
+      <h1 className='theme-blue'>Hello Kontakt</h1>
     </>
   )
 }

@@ -1,5 +1,5 @@
 import { Navbar } from '../components/navbar'
-export default function Home() {
+export default function Kontakt() {
   return(
     <>
       <Navbar />

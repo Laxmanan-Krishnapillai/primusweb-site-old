@@ -4,7 +4,7 @@ import { content } from '../tailwind.config'
 import Link from 'next/link'
 import { getStrapiMedia } from '../lib/media'
 import Image from 'next/image';
-import Navbar from '../components/navbar'
+import { Navbar } from '../components/navbar'
 export default function Blog({blogposts}) {
   return(
     <div className='flex p-8 bg-gradient-to-r from-gray-700 via-gray-900 mt-[10vh] overflow to-black min-h-screen'>
