@@ -5,7 +5,7 @@ const nextConfig = {
 
 module.exports = nextConfig
 module.exports = {
-  images: {
-    domains: ['assets.vercel.com', 'localhost', 'polar-castle-17445.herokuapp.com'],
+  images: { 
+    domains: ['nextjs-frontend-jet.vercel.app', 'localhost', 'polar-castle-17445.herokuapp.com'],
   },
 }
