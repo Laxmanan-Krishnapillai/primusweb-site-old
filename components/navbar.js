@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 export function Navbar() {
     const router = useRouter();
     return(
-        <nav className="h-[10vh] w-screen flex fixed z-[99999] bg-gradient-to-r from-gray-700 via-gray-900 to-black">
+        <nav className="h-[10vh] w-screen flex fixed z-[99999] bg-gradient-to-r top-0 from-gray-700 via-gray-900 to-black">
             <ul className='flex h-[10vh] w-screen justify-center right-0'>
                 {[
                     ['Hjem', '/'],
