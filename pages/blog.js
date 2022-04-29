@@ -1,4 +1,4 @@
-import { fetchData } from "../lib/api";
+/*import { fetchData } from "../lib/api";
 import { content } from "../tailwind.config";
 import Link from "next/link";
 import Layout from "../components/layout";
@@ -54,3 +54,4 @@ export async function getStaticProps() {
     revalidate: 120,
   };
 }
+*/

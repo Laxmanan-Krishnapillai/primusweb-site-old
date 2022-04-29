@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import Markdown from "markdown-to-jsx";
 import { fetchData } from "../../lib/api";
 import Image from "next/image";
@@ -56,3 +56,4 @@ export const getStaticProps = async (context) => {
     revalidate: 120,
   };
 };
+*/
