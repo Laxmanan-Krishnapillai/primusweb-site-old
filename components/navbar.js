@@ -1,10 +1,24 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
 export function Navbar() {
   const router = useRouter();
+  var useref = useRef();
+  useEffect(() => {
+    [...useref.current.children].map((child) => {
+      child.getAttribute("find") === router.pathname
+        ? setIconTop(child.offsetTop + child.clientHeight / 2 - 3)
+        : null;
+    });
+  }, []);
+  const [iconTop, setIconTop] = useState();
   const [showMenu, setShowMenu] = useState(true);
+  function onClickMenu(e) {
+    setIconTop(
+      e.target.parentNode.offsetTop + e.target.parentNode.clientHeight / 2 - 3
+    );
+  }
+
   return (
     <>
       {/**Menuicon*/}
@@ -23,18 +37,27 @@ export function Navbar() {
       >
         {/**Circle that shows link active status */}
         <div
-          className={`w-2 h-2 absolute bg-white rounded-xl left-1 flex items-center justify-center`}
+          className={`w-2 h-2 absolute bg-white rounded-xl left-1 transition-all duration-300 ease-in-out flex items-center justify-center`}
+          style={{ top: iconTop }}
         >
           <div className="absolute w-2 h-2 animate-ping bg-white rounded-full"></div>
         </div>
-        <ul className="flex flex-col h-screen w-full justify-center right-0">
+        <ul
+          ref={useref}
+          className="flex flex-col h-screen w-full justify-center right-0"
+        >
           {[
             ["Hjem", "/"],
             ["Blog", "/blog"],
             ["Kontakt", "/kontakt"],
             ["Om os", "/om-os"],
           ].map(([title, url]) => (
-            <li key={url} className={`relative m-4 text-white text-center`}>
+            <li
+              key={url}
+              className={`relative m-4 text-white text-center`}
+              find={url}
+              onClick={(e) => onClickMenu(e)}
+            >
               <Link href={url}>{title}</Link>
             </li>
           ))}
