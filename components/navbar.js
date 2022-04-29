@@ -56,7 +56,10 @@ export function Navbar() {
               key={url}
               className={`relative m-4 text-white text-center`}
               find={url}
-              onClick={(e) => onClickMenu(e)}
+              onClick={(e) => {
+                onClickMenu(e);
+                setTimeout(() => setShowMenu(!showMenu), 300);
+              }}
             >
               <Link href={url}>{title}</Link>
             </li>
