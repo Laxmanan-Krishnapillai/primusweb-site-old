@@ -6,10 +6,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'theme-blue': '#15212d',
-        'theme-pink': '#f2295b'
+        "theme-blue": "#15212d",
+        "theme-pink": "#f2295b",
       },
     },
   },
-  plugins: [],
-}
+  plugins: [require("@tailwindcss/forms")],
+};
