@@ -48,7 +48,6 @@ export function Navbar() {
         >
           {[
             ["Hjem", "/"],
-            ["Blog", "/blog"],
             ["Kontakt", "/kontakt"],
             ["Om os", "/om-os"],
           ].map(([title, url]) => (
